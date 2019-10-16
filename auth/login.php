@@ -5,13 +5,13 @@ require "./config.php";
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-$sql = "select name,pass from user where name='$username' and pass='$password'";
+$sql = "select username,password from user where username = '$username' and password = '$password'";
 $result = $conn->query($sql);
 if($result->num_rows > 0)
 {
     $row = $result->fetch_assoc();
     session_start();
-    $_SESSION[username] = $row[name];
+    $_SESSION[username] = $row[username];
     header("location: ../index.php");
 }
 else{

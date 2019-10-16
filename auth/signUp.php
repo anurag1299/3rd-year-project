@@ -6,10 +6,13 @@ $email = $_POST['email'];
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-$sql = "insert into user(email,name,pass) values('$email','$username','$password')";
+$sql = "insert into user(username,password,email) values('$username','$password','$email')";
 if($conn->query($sql))
 {
-    echo("user added");
+    //echo("user added");
+    //session_start();
+    //$_SESSION['username'] = $username;
+    header("location: ../index.php");
 }
 else
 {
