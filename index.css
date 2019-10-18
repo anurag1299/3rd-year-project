@@ -42,3 +42,18 @@
     float: left;
     margin-top: 2%; 
 } */
+
+
+
+.response{
+    padding: 6px;
+    display: none;
+}
+
+.not-exists{
+    color: green;
+}
+
+.exists{
+    color: red;
+}

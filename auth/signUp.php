@@ -10,8 +10,8 @@ $sql = "insert into user(username,password,email) values('$username','$password'
 if($conn->query($sql))
 {
     //echo("user added");
-    //session_start();
-    //$_SESSION['username'] = $username;
+    session_start();
+    $_SESSION['username'] = $username;
     header("location: ../index.php");
 }
 else
