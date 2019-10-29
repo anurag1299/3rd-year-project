@@ -1,0 +1,10 @@
+.post-form{
+    width: 100%;
+    background: white;
+    padding:2vh;
+    border-radius: 5px;
+}
+
+textarea{
+    height: 20vh !important;
+}

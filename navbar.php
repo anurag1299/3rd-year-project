@@ -28,7 +28,7 @@ session_start();
                         </form>
                 </div>
                 <!-- buttons -->
-                <div class="col-sm-4" style="background: rgb(250, 250, 250) float:right;">
+                <div class="col-sm-4" style="background: rgb(250, 250, 250);">
                     <?php
                     if(!isset($_SESSION['username']))
                     {
@@ -51,7 +51,7 @@ session_start();
                             <?php
                             if(isset($_SESSION['username']))
                             {
-                                echo '<a class="dropdown-item" href="#">My Profile</a>
+                                echo '<a class="dropdown-item" href="profile.php">My Profile</a>
                                 <a class="dropdown-item" href="#">Profile Settings</a>
                                 <hr>
                                 <a class="dropdown-item btn btn-danger" href="auth/logout.php">Log Out</a>';
