@@ -1,14 +1,10 @@
 
 
-<html>
-    <head>
-    <title>Profile</title>
-    <link rel="stylesheet" type="text/css" href="profile.css">
-    </head>
+
     <?php
     require "navbar.php"
     ?>
-    <body style="background:#DAE0E6; overflow-x:hidden;" >
+    
         <div class="row">
             <!-- left side -->
             <div class="lt col-9  ml-5 mr-0 my-4 px-0 py-0">
@@ -35,5 +31,4 @@
                 <!-- <div class="row">extra</div> -->
             </div>
         </div>
-    </body>
-</html>
+    

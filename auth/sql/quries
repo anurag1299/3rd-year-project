@@ -1,0 +1,20 @@
+CREATE TABLE thread(
+	tid int PRIMARY KEY AUTO_INCREMENT,
+    title varchar(50) not null,
+    body varchar(300),
+    dateOfCreation date,
+    creatorId int, 
+    categoryId int,
+    vote int DEFAULT 0,
+    status BINARY DEFAULT 1,
+    FOREIGN key(creatorId) REFERENCES user(uid) ON DELETE CASCADE,
+    FOREIGN key(categoryId) REFERENCES category(cat_id) ON DELETE CASCADE
+);
+
+CREATE table pivot (
+	uid int,
+    follow int,
+    FOREIGN KEY(uid) REFERENCES user(uid) on DELETE CASCADE,
+    FOREIGN KEY(follow) REFERENCES category(cat_id) on DELETE CASCADE
+    
+);

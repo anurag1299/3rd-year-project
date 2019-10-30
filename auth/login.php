@@ -12,6 +12,7 @@ if($result->num_rows > 0)
     $row = $result->fetch_assoc();
     session_start();
     $_SESSION[username] = $row[username];
+    $_SESSION[id] = $row[uid];
     header("location: ../index.php");
 }
 else{

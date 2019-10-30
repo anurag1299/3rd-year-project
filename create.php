@@ -18,6 +18,24 @@
                         <form action="post.php" method="POST">
                         <input type="text" class="form-control my-2" placeholder="title" name="title" aria-label="Username" aria-describedby="basic-addon1" required>
                         <textarea class="form-control my-2" placeholder="Body" name="body" aria-label="With textarea" required></textarea> 
+                        <input list="category" name="category" placeholder="category">
+                        <datalist id="category">
+                            <?php   
+                                require "auth/config.php";
+                                $sql = "select cat_title from category";
+                                $result = $conn->query($sql);
+                                if($result->num_rows > 0)
+                                {
+                                   while($row = $result->fetch_assoc())
+                                   {
+                                        echo "<option value='".$row['cat_title']."'>";                      //<option value=" Afghanistan">
+                                   }
+                                    
+                                }else{
+                                    echo "0 result";
+                                }
+                            ?>
+                        </datalist>
                         <button type="submit" class="btn btn-primary btn-block">Post</button>
                         </form>
                     </div>
