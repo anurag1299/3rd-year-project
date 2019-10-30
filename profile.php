@@ -4,6 +4,9 @@
     <?php
     require "navbar.php"
     ?>
+    <?php
+    require "profile1.php"
+    ?>
     
         <div class="row">
             <!-- left side -->
