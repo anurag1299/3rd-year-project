@@ -29,8 +29,8 @@
            .data("origLeft", $magicLine.position().left)
            .data("origWidth", $magicLine.width());
 
-      $(".navbar-nav li a").hover(
-      function() {
+      $(".navbar-nav li a").hover(function() {
+          console.log("hi");
           $el = $(this);
           leftPos = $el.position().left;
           newWidth = $el.parent().width();
@@ -51,8 +51,8 @@
     </script>
 
 
-  <div id="app" style="background-color: white; border-bottom: 1px solid #d3d3d3;" >
-    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <div id="app" style="background-color:white;border-bottom: 1px solid #d3d3d3;" >
+    <nav class="navbar navbar-toggleable-md navbar-light ">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

@@ -1,7 +1,7 @@
 <?php
 
 $server_name = "localhost";
-$server_username = "anurag";
+$server_username = "root";
 $server_password = "";
 $db = "my_reddit";
 

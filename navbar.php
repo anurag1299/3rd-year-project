@@ -28,7 +28,7 @@ session_start();
                         </form>
                 </div>
                 <!-- buttons -->
-                <div class="col-sm-4" style="background: rgb(250, 250, 250);">
+                <div class="col-sm-4" style="background: rgb(255, 255, 255); text-align: right;">
                     <?php
                     if(!isset($_SESSION['username']))
                     {
@@ -36,8 +36,9 @@ session_start();
                             <button type="button" class="btn btn-outline-primary " data-toggle="modal" data-target="#signUpModalCenter" style="width: 40%">Sign Up</button>';
                     }
                     else
-                    {
-                        echo "Welcome, ".$_SESSION['username'];
+                    {   
+
+                        echo "Welcome,".$_SESSION['username'];
                     }
 
                     ?>
