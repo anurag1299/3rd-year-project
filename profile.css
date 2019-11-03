@@ -49,6 +49,7 @@
     width: 3% !important;
     padding: 10px;
     text-align: center;
+    border-right:1px solid rgb(206, 206, 206);
 }
 
 .delete-post:hover{
@@ -116,4 +117,21 @@
     width: 97%;
     background: white;
     padding: 10px;
+}
+
+
+.up:hover{
+    color: #CC3700;
+}
+
+.down:hover{
+    color:#5A75CC;
+}
+
+.upped{
+    color: #CC3700;
+}
+
+.downed{
+    color:#5A75CC;
 }
