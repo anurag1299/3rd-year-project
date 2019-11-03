@@ -16,7 +16,7 @@ require "auth/config.php";
     <tbody>
         <?php
 
-        $sql ="SELECT T.cat_id,T.cat_title,T.count,COUNT(D.dateOfCreation) as today from (SELECT cat_id,cat_title,count(categoryId) as count from category LEFT JOIN thread ON cat_id = categoryId GROUP by cat_title ORDER BY count DESC) T LEFT JOIN (SELECT categoryId,dateOfCreation FROM thread where dateOfCreation = CURDATE()) D ON T.cat_id = D.categoryId GROUP BY T.cat_title";
+        $sql ="SELECT T.cat_id,T.cat_title,T.count,COUNT(D.dateOfCreation) as today from (SELECT cat_id,cat_title,count(categoryId) as count from category LEFT JOIN thread ON cat_id = categoryId GROUP by cat_title ORDER BY count DESC) T LEFT JOIN (SELECT categoryId,dateOfCreation FROM thread where dateOfCreation = CURDATE()) D ON T.cat_id = D.categoryId GROUP BY T.cat_title ORDER BY T.count DESC";
         $result = $conn->query($sql);
         $sql1 ="SELECT follow from pivot where uid=".$_SESSION['id'];
         

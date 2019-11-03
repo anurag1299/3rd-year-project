@@ -102,3 +102,18 @@
     right: 7vw;
     display: none;
 }
+
+.vote-col
+{
+    background: #F7F9FA;
+    width: 3% !important;
+    padding: 10px;
+    text-align: center;
+}
+
+.data-col
+{
+    width: 97%;
+    background: white;
+    padding: 10px;
+}

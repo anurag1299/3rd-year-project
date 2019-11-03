@@ -28,7 +28,7 @@
                         echo'<div class="row mypost">
                                 <div class="vote-col">
                                     <div class="up"><i class="fa fa-arrow-up" aria-hidden="true"></i></div>
-                                    <div class="vote">0</div>
+                                    <div class="vote">'.$row['vote'].'</div>
                                     <div class="down"><i class="fa fa-arrow-down" aria-hidden="true"></i></div>
                                 </div>
                                 <div class="data-col">
