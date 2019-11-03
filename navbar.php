@@ -14,7 +14,7 @@ session_start();
     </head>
     <body style="background:#DAE0E6; overflow-x:hidden;">
         <!-- header -->
-        <nav class="navbar" style="background:white; box-shadow:0px 1px 5px grey;">
+        <nav class="navbar sticky-top" style="background:white; box-shadow:0px 1px 5px grey;">
             <div class="container-fluid row">
                 <!-- icon -->
                 <div class="col-sm-3" style="background: rgb(255, 255, 255); padding:0;">

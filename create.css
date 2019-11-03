@@ -8,3 +8,14 @@
 textarea{
     height: 20vh !important;
 }
+
+.guidelines{
+    background: white;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.guidelines li{
+    list-style-type: decimal;
+}

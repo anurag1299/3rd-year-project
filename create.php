@@ -1,12 +1,8 @@
-<html>
-    <head>
-    <title>Profile</title>
-    <link rel="stylesheet" type="text/css" href="profile.css">
-    </head>
+
     <?php
     require "navbar.php"
     ?>
-    <body style="background:#DAE0E6; overflow-x:hidden;" >
+   
         <div class="container">
             <div class="row pt-5">
                 <!-- right side -->
@@ -17,9 +13,12 @@
                     <div class="post-form">
                         <form action="post.php" method="POST">
                         <input type="text" class="form-control my-2" placeholder="title" name="title" aria-label="Username" aria-describedby="basic-addon1" required>
-                        <textarea class="form-control my-2" placeholder="Body" name="body" aria-label="With textarea" required></textarea> 
-                        <input list="category" name="category" placeholder="category">
-                        <datalist id="category">
+                        
+                        <textarea class="form-control my-2" placeholder="Body" name="body" required></textarea>
+        
+                        
+                        <input class="my-2" list="category" name="category" placeholder="category">
+                        <datalist id="category" >
                             <?php   
                                 require "auth/config.php";
                                 $sql = "select cat_title from category";
@@ -36,7 +35,7 @@
                                 }
                             ?>
                         </datalist>
-                        <button type="submit" class="btn btn-primary btn-block">Post</button>
+                        <button type="submit" class="my-2 btn btn-primary btn-block">Post</button>
                         </form>
                     </div>
                 </div>
@@ -55,10 +54,28 @@
                             
                         </div>
                     </div>
+                    <div class="guidelines container my-5">
+                        <h5 class="mb-4 mt-2"><b>Posting to MyReddit</b></h5>
+                        
+                        <li>Remember the Human</li>
+                        <hr>
+                        <li>Behave like you would in real life</li>
+                        <hr>
+                        <li>Look for the original source of content</li>
+                        <hr>
+                        <li>Search for duplicates before posting</li>
+                        <hr>
+                        <li>Read the community’s rules</li>
+                        <hr>
+                        
+                    </div>
                 
                 <!-- <div class="row">extra</div> -->
             </div>
             </div>
         </div>
-    </body>
-</html>
+    
+
+        <script>
+            CKEDITOR.replace( 'body' );
+        </script>

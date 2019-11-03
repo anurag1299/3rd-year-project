@@ -2,7 +2,7 @@
 
 .profile-box
 {
-    height: 25vh;
+    /* height: 25vh; */
     background: white;
     border-radius: 5px;
 }
@@ -31,13 +31,74 @@
 {
     /* background: white; */
     width: 100%;
-    height: 16vh;
+    /* height: 16vh; */
     padding-left: 2vh;
     padding-right: 2vh;
+    padding-bottom: 2vh; 
 }
 
 .profile-box .data button
 {
     bottom: 0vh !important;
     margin-top:2vh;
+}
+
+.mypost .vote-col
+{
+    background: #F7F9FA;
+    width: 3% !important;
+    padding: 10px;
+    text-align: center;
+}
+
+.delete-post:hover{
+    color:red;
+}
+
+.approve-post:hover{
+    cursor: pointer;
+    color:green;
+}
+
+.approved-post{
+    color:green;
+}
+
+.mypost .data-col
+{
+    width: 97%;
+    background: white;
+    padding: 10px;
+}
+
+.mypost .vote-col .up
+{
+    padding: 3px;
+}
+
+.mypost .vote-col .down
+{
+    padding: 3px;
+}
+
+
+.mypost .vote-col .vote
+{
+    padding: 3px;
+}
+
+.mypost{
+    border: 1px solid rgb(206, 206, 206);
+} 
+
+.mypost:hover{
+    border: 1px solid black;
+}
+
+
+#toTop{
+    position: fixed;
+    bottom: 5vh;
+    right: 7vw;
+    display: none;
 }

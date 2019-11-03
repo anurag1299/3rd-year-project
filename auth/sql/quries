@@ -18,3 +18,11 @@ CREATE table pivot (
     FOREIGN KEY(follow) REFERENCES category(cat_id) on DELETE CASCADE
     
 );
+
+
+SELECT T.cat_id,T.cat_title,T.count,count(dateOfCreation) as today from (SELECT cat_id,cat_title,count(categoryId) as count from category LEFT JOIN thread ON cat_id = categoryId GROUP by cat_title ORDER BY count DESC) T LEFT JOIN thread ON dateOfCreation = (SELECT CURDATE());
+
+SELECT categoryId,dateOfCreation FROM thread where dateOfCreation = CURDATE() 
+
+
+SELECT T.cat_id,T.cat_title,T.count,COUNT(D.dateOfCreation) as today from (SELECT cat_id,cat_title,count(categoryId) as count from category LEFT JOIN thread ON cat_id = categoryId GROUP by cat_title ORDER BY count DESC) T LEFT JOIN (SELECT categoryId,dateOfCreation FROM thread where dateOfCreation = CURDATE()) D ON T.cat_id = D.categoryId GROUP BY T.cat_title;
