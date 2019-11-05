@@ -27,7 +27,7 @@
                                 {
                                    while($row = $result->fetch_assoc())
                                    {
-                                        echo "<option value='".$row['cat_title']."'>";                      //<option value=" Afghanistan">
+                                        echo "<option value='".$row['cat_title']."'>";
                                    }
                                     
                                 }else{

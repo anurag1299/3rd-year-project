@@ -28,7 +28,7 @@ session_start();
                         </form>
                 </div>
                 <!-- buttons -->
-                <div class="col-sm-4" style="background: rgb(250, 250, 250);">
+                <div class="col-sm-4" style="background: rgb(255, 255, 255);">
                     <?php
                     if(!isset($_SESSION['username']))
                     {
@@ -90,7 +90,7 @@ session_start();
                                                <br><br>
                                                <input type="password" name="password" placeholder="password" required>
                                                <br><br>
-                                               <input type="submit" class="btn btn-outline-primary">
+                                               <input type="submit" class="btn btn-outline-primary" value="Log In">
                                            </form>
                                         </div>
                                         <div class="modal-footer">
@@ -128,12 +128,13 @@ session_start();
                                             <br><br>
                                             <input type="password" name="password" placeholder="password"required>
                                             <br><br>
-                                            <input type="submit" class="btn btn-outline-primary">
+                                            <input type="submit" class="btn btn-outline-primary" value="Register">
                                        </form>
                                     </div>
                                     <div class="modal-footer">
                                         <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                         <button type="button" class="btn btn-primary">Save changes</button> -->
+                                        <p>By clicking Register, you agree to our Terms and that you have read our Privacy Policy and Content Policy. </p>
                                     </div>
                         </div>
                     </div>
@@ -169,8 +170,10 @@ $(document).ready(function(){
                 if(response > 0){
                     $("#uname_response").show();
                     $("#uname_response").html("<span class='exists'>* Username Already in use.</span>");
+                    $(':input[type="submit"]').prop('disabled', true);
                 }else{
                    $("#uname_response").hide();
+                   $(':input[type="submit"]').prop('disabled', false);
                 }
                 
              },
@@ -200,8 +203,10 @@ $(document).ready(function(){
                         if(response > 0){
                             $("#email_response").show();
                             $("#email_response").html("<span class='exists'>* Email already in use.</span>");
+                            $(':input[type="submit"]').prop('disabled', true);
                         }else{
                             $("#email_response").hide();
+                            $(':input[type="submit"]').prop('disabled', false);
                         }
                         
                     },

@@ -80,3 +80,6 @@ function downvote(tid){
         }
     });
 }
+
+
+
