@@ -2,44 +2,11 @@
 
 
     <?php
-    require "navbar.php"
+    require "navbar.php";
+    
     ?>
-        <style>
-            #magic-line {
-            
-            }
-        </style>
-
-
-        <div id="app" style="background-color:white;border-bottom: 1px solid #d3d3d3;" >
-            <nav class="navbar navbar-toggleable-md navbar-light ">
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="menus">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                <a class="nav-link" href="#">Overview<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Posts</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Comments</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Saved</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Upvoted</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Downvoted</a>
-                </li>
-            </ul>
-            </div>
-            </nav>
-        </div>
+    
+        
     
         <div class="row">
             <!-- left side -->
@@ -120,7 +87,7 @@
                         <!-- spacing -->
                         <div style="height:25px;"></div>
                         <!-- data area -->
-                        <div class="data"> 
+                        <div class="data mt-3"> 
                             <?php echo "u/".$_SESSION['username']."<br>"?>
                             <form action="create.php">
                             <button type="submit" class="btn btn-primary btn-block">New Post</button>
@@ -154,40 +121,4 @@
         </script>
     
 
-    <!-- magic line script -->
-    <script id="rendered-js">
-      $(function() {
-          var $el,
-          leftPos,
-          newWidth,
-          $mainNav = $(".navbar-nav");
-
-          $mainNav.append("<li id='magic-line' style='position: absolute;bottom: 0;left: 0;width: 100px;height: 4px;background: #0079d3;'></li>");
-          var $magicLine = $("#magic-line");
-
-          $magicLine
-           .width($(".active").width())
-           .css("left", $(".active a").position().left)
-           .data("origLeft", $magicLine.position().left)
-           .data("origWidth", $magicLine.width());
-
-      $(".navbar-nav li a").hover(function() {
-          console.log("hi");
-          $el = $(this);
-          leftPos = $el.position().left;
-          newWidth = $el.parent().width();
-          $magicLine.stop().animate({
-            left: leftPos,
-            width: newWidth
-          });
-        },
-    function() {
-          $magicLine.stop().animate({
-            left: $magicLine.data("origLeft"),
-            width: $magicLine.data("origWidth")
-          });
-        }
-      );
-  });
-
-    </script>
+    

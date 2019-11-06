@@ -49,7 +49,7 @@
                         <!-- spacing -->
                         <div style="height:25px;"></div>
                         <!-- data area -->
-                        <div class="data"> 
+                        <div class="data mt-3"> 
                             <?php echo "u/".$_SESSION['username']."<br>"?>
                             
                         </div>

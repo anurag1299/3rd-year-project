@@ -57,3 +57,13 @@
 .exists{
     color: red;
 }
+
+@font-face{
+    font-family: 'prime';
+    src: url(fonts/Prime-Regular.ttf);
+}
+
+
+html *{
+    font-family: prime;
+}

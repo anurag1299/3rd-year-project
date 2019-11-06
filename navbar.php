@@ -14,7 +14,7 @@ session_start();
     </head>
     <body style="background:#DAE0E6; overflow-x:hidden;">
         <!-- header -->
-        <nav class="navbar sticky-top" style="background:white; box-shadow:0px 1px 5px grey;">
+        <nav class="navbar sticky-top" style="background:white; border-bottom:1px solid #d3d3d3;">
             <div class="container-fluid row">
                 <!-- icon -->
                 <div class="col-sm-3" style="background: rgb(255, 255, 255); padding:0;">
@@ -28,7 +28,7 @@ session_start();
                         </form>
                 </div>
                 <!-- buttons -->
-                <div class="col-sm-4" style="background: rgb(255, 255, 255);">
+                <div class="col-sm-4" style="background: rgb(255, 255, 255); text-align:right;">
                     <?php
                     if(!isset($_SESSION['username']))
                     {
@@ -52,7 +52,7 @@ session_start();
                             if(isset($_SESSION['username']))
                             {
                                 echo '<a class="dropdown-item" href="profile.php">My Profile</a>
-                                <a class="dropdown-item" href="#">Profile Settings</a>
+                                <a class="dropdown-item" href="settings.php">Profile Settings</a>
                                 <hr>
                                 <a class="dropdown-item btn btn-danger" href="auth/logout.php">Log Out</a>';
                             }
