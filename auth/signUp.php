@@ -12,6 +12,8 @@ if($conn->query($sql))
     //echo("user added");
     session_start();
     $_SESSION['username'] = $username;
+    $_SESSION['id'] = $row['uid'];
+    $_SESSION['email'] = $row['email'];
     header("location: ../index.php");
 }
 else

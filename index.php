@@ -15,6 +15,12 @@ require "navbar.php"
                     {
                         while($row = $result->fetch_assoc())
                         {
+                            $sqlPoster = "SELECT username FROM user WHERE uid=".$row['creatorId'];
+                            $resultPoster = $conn->query($sqlPoster);
+                            $poster = $resultPoster->fetch_assoc();
+
+
+
                             $sqlcheck = "SELECT * FROM voting WHERE tid=".$row['tid']." AND uid=".$_SESSION['id'].";";
                             $resultcheck = $conn->query($sqlcheck);
                             $rowcheck = $resultcheck->fetch_assoc();
@@ -47,6 +53,7 @@ require "navbar.php"
                                     </div>
                                     <div class="data-col px-0 pb-0">   
                                         <div class="pl-3">
+                                        Posted by u/'.$poster['username'].'
                                         <h5 class="card-title">'.$row['title'].'</h5>
                                         <p class="card-text">'.$row['body'].'</p>
                                         </div>
@@ -65,6 +72,10 @@ require "navbar.php"
                     $result = $conn->query($sql);
                     while($row = $result->fetch_assoc())
                     {
+                        $sqlPoster = "SELECT username FROM user WHERE uid=".$row['creatorId'];
+                            $resultPoster = $conn->query($sqlPoster);
+                            $poster = $resultPoster->fetch_assoc();
+
                         $sqlcheck = "SELECT * FROM voting WHERE tid=".$row['tid']." AND uid=".$_SESSION['id'].";";
                             $resultcheck = $conn->query($sqlcheck);
                             $rowcheck = $resultcheck->fetch_assoc();
@@ -90,6 +101,7 @@ require "navbar.php"
                         echo'<div class=" px-0 py-1">
                             <div class="row  " style="border:1px solid rgb(206, 206, 206);">
                                 <div class="vote-col pl-1" style="border-right:1px solid rgb(206, 206, 206);">
+                                Posted by u/'.$poster['username'].'
                                 <div id="u'.$row['tid'].'" class="'.$upclass.'" onClick="upvote('.$row['tid'].')"><i class="fa fa-arrow-up" aria-hidden="true"></i></div>
                                 <div id="v'.$row['tid'].'" class="vote p-1">'.$row['vote'].'</div>
                                 <div id="d'.$row['tid'].'" class="'.$downclass.'" onClick="downvote('.$row['tid'].')"><i class="fa fa-arrow-down" aria-hidden="true"></i></div>
@@ -114,7 +126,12 @@ require "navbar.php"
                     $sql = "SELECT * FROM thread WHERE 1 ORDER BY dateOfCreation DESC";
                     $result = $conn->query($sql);
                     while($row = $result->fetch_assoc())
+
                 {
+
+                    $sqlPoster = "SELECT username FROM user WHERE uid=".$row['creatorId'];
+                            $resultPoster = $conn->query($sqlPoster);
+                            $poster = $resultPoster->fetch_assoc();
                     
 
 
@@ -127,6 +144,7 @@ require "navbar.php"
                             </div>
                             <div class="data-col px-0 pb-0">   
                                 <div class="pl-3">
+                                Posted by u/'.$poster['username'].'
                                 <h5 class="card-title">'.$row['title'].'</h5>
                                 <p class="card-text">'.$row['body'].'</p>
                                 </div>

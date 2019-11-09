@@ -4,7 +4,7 @@ session_start();
 
 <html>
     <head>
-        <title>my reddit</title>
+        <title>Queue Overflow</title>
         
         <?php
         require "links.php";
@@ -19,7 +19,7 @@ session_start();
                 <!-- icon -->
                 <div class="col-sm-3" style="background: rgb(255, 255, 255); padding:0;">
                         <a class="navbar-brand"><img src="assets/icon.jpeg" width="70" height="60"></a>
-                        <a class="navbar-brand" href="index.php">My Reddit</a>
+                        <a class="navbar-brand" href="index.php">Queue<b>Overflow</b></a>
                 </div>
                 <!-- search bar -->
                 <div class="col-sm-5" style="background: rgb(255, 255, 255)">
