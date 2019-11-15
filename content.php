@@ -7,10 +7,10 @@ require "auth/config.php";
 <table id="contents" class="display datatable">
     <thead>
         <tr>
-            <th>Category</th>
-            <th>No. of Threads</th>
-            <th>Asked Today</th>
-            <th>Status</th>
+            <th style="text-align:center">Category</th>
+            <th style="text-align:center">No. of Threads</th>
+            <th style="text-align:center">Asked Today</th>
+            <th style="text-align:center">Status</th>
         </tr>
     </thead>
     <tbody>
@@ -50,10 +50,10 @@ require "auth/config.php";
 
 
             echo '<tr>
-                  <td>'.$row['cat_title'].'</td>
-                  <td>'.$row['count'].'</td>
-                  <td>'.$row['today'].'</td>
-                  <td><button id="'.$row['cat_id'].'" class="btn btn-block '.$class.'" onClick="follow('.$row['cat_id'].')">'.$text.'</button></td>
+                  <td style="text-align:center">'.$row['cat_title'].'</td>
+                  <td style="text-align:center">'.$row['count'].'</td>
+                  <td style="text-align:center">'.$row['today'].'</td>
+                  <td style="text-align:center"><button id="'.$row['cat_id'].'" class="btn btn-block '.$class.'" onClick="follow('.$row['cat_id'].')">'.$text.'</button></td>
                   <tr>';
         }
 

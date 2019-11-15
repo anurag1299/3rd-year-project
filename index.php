@@ -175,7 +175,7 @@ require "navbar.php"
                         }
                     
                     ?>
-                    <a class="btn btn-primary btn-block mt-3" href="content.php">View All</a>
+                    <a class="btn btn-primary btn-block mt-3" data-toggle="modal" data-target="#loginModalCenter">View All</a>
                 </div>
                 <button class="btn btn-primary "  id="toTop" >Back to Top</button>
         </div>

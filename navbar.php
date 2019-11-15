@@ -126,7 +126,7 @@ session_start();
                                             <span id="uname_response" class="response"></span>
                                             <input id="txt_uname" type="text" name="username" placeholder="username" required>
                                             <br><br>
-                                            <input type="password" name="password" placeholder="password"required>
+                                            <input type="password" name="password" placeholder="password" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
                                             <br><br>
                                             <input type="submit" class="btn btn-outline-primary" value="Register">
                                        </form>
